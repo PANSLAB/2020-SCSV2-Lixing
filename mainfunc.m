@@ -98,26 +98,3 @@ beamsrecord(:,:,i)=loc(beams);
 %record baseline and distance to sensor
 baseline(:,i)=loc(argmax);
 end
-
-%%
-%beam error
-figure(5)
-truebeam=6.1;
-bar(reshape(mean(beamsrecord(1:2,2,:))-truebeam,[1,11]));
-xlabel('cycles we use','Fontsize',15)
-ylabel('error/meters','Fontsize',15)
-title('error of beam estimation','Fontsize',15)
-%%
-%formula test
-figure(4)
-for i=1:4
-    subplot(2,2,i)
-     y=vibrationfunc(loc,location(i),loc(beams(i,:)));
-     y=y/max(y);
-    plot(loc,denseline(:,i)/max(denseline(:,i)));hold on
-     plot(loc,y);
-    title(["sensor",i]);
-    xlabel("footstep through hallway/meter")
-    ylabel("normalized energy")
-end
-legend('Data-driven model','physical model')
