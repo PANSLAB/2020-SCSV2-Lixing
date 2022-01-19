@@ -1,4 +1,5 @@
 # SCSV2-Lixing
+## Related publication: https://dl.acm.org/doi/abs/10.1145/3410530.3414586.
 ## This is a Self-Calibration Sensing system based on Vibration and Vision, mainly built by Lixing He, supervised by Prof. Shijia Pan. Files: 
 ## mainfunc:
 ### load data (requires vibration data, vision data(can have different sample rate) and function to detect footstep) then give the result. beamsrecord: estimated beam locations for each cycles, location: estimated sensors location for each cycles, baseline: estimated sensors location by baseline method.
